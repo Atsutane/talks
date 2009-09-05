@@ -5,6 +5,8 @@
 \usepackage{url}
 \usepackage{listings}
 
+\newcommand{\Anf}[1]{\glqq #1\grqq}
+
 \author{Thorsten 'Atsutane' Toepper}
 \title{PSP - Geschichte der Custom Firmwares}
 
@@ -27,6 +29,7 @@
 \begin{slide}{PSP 1000 / FAT}
 	\begin{list}{-}{}
 		\item{Erschien im September 2005 in Europa}
+		\item{480x272 Auflösung, 4,3 Zoll Display}
 		\item{32Bit MIPS CPU (333 MHz)}
 		\item{32MB RAM}
 	\end{list}
@@ -45,7 +48,7 @@
 \begin{slide}{PSP 3000 / FAT}
 	\begin{list}{-}{}
 		\item{Erschien im Oktober 2008 in Europa}
-		\item{\"  Verbessertes  \" Display}
+		\item{\Anf{Verbessertes} Display}
 		\item{Weitere Schutzmaßnahmen gegen das aufspielen alternativer Firmware}
 	\end{list}
 \end{slide}
@@ -61,38 +64,182 @@
 	Exploits um Homebrews zu starten.\linebreak
 	\linebreak
 	\begin{LARGE}\textbf{IPL}\end{LARGE}\linebreak
-
+	Initial Program Loader
 \end{slide}
 
 
 
 \section{Historie der Sony Firmwares}
 \begin{slide}{1.xx Kernel}
-	\begin{LARGE}\textbf{1.00 - 12 Dec 2004}\end{LARGE}
+	\begin{large}\textbf{1.00 - 12 Dec 2004}\end{large}
 	\begin{list}{-}{}
 		\item{Keine Code Authorisierung}
 		\item{Nur auf den ersten japanischen Modellen}
 	\end{list}
-	\begin{LARGE}\textbf{1.50 - 24 Mar 2005}\end{LARGE}
+	\begin{large}\textbf{1.50 - 24 Mar 2005}\end{large}
 	\begin{list}{-}{}
 		\item{Code Authorisierung}
 		\item{Mehrsprachig}
 	\end{list}
-	\begin{LARGE}\textbf{1.51 - 18 May 2005}\end{LARGE}
+	\begin{large}\textbf{1.51 - 18 May 2005}\end{large}
 	\begin{list}{-}{}
-		\item{Patch von KXploit}
+		\item{KXploit gefixt}
 		\item{Mehrsprachig}
 	\end{list}
-	\begin{LARGE}\textbf{1.52 - 15 Jun 2005}\end{LARGE}
+	\begin{large}\textbf{1.52 - 15 Jun 2005}\end{large}
 	\begin{list}{-}{}
 		\item{Weitere Patches}
 	\end{list}
 \end{slide}
 
 \begin{slide}{2.xx Kernel}
-	\begin{LARGE}\textbf{2.00 - 1 Sep 2005}\end{LARGE}
+	\begin{large}\textbf{2.00 - 1 Sep 2005 *}\end{large}
 	\begin{list}{-}{}
 		\item{u.a. Browser, WPA, MP4 und WAV Support, verschiedene Bildformate und Wallpaperfunktion hinzugefügt}
 	\end{list}
+	\begin{large}\textbf{2.01 - 3 Oct 2005}\end{large}
+	\begin{list}{-}{}
+		\item{TIFF-Exploit gefixt}
+	\end{list}
+	\begin{large}\textbf{2.50 - 13 Oct 2005 *}\end{large}
+	\begin{list}{-}{}
+		\item{Browser verbessert}
+		\item{WPA-PSK(AES) Support hinzugefügt}
+		\item{DRM geschützte Videos können abgespielt werden}
+	\end{list}
+	\begin{large}\textbf{2.60 - 29 Nov 2005}\end{large}
+	\begin{list}{-}{}
+		\item{Audio Podcast Support im RSS Reader}
+	\end{list}
 \end{slide}
+
+\begin{slide}{2.xx Kernel}
+	\begin{large}\textbf{2.70 - 25 Apr 2006}\end{large}
+	\begin{list}{-}{}
+		\item{Adobe Flash Player hinzugefügt}
+	\end{list}
+	\begin{large}\textbf{2.71 - 30 May 2006}\end{large}
+	\begin{list}{-}{}
+		\item{Demos können über den Browser geladen und installiert werden.}
+	\end{list}
+	\begin{large}\textbf{2.80 - 27 Jul 2006 *}\end{large}
+	\begin{list}{-}{}
+		\item{Video Podcast Support im RSS Reader}
+		\item{Im geheimen sceKernelLoadExec gefixt, netterweise sceRegOpenRegistry geöffnet.}
+	\end{list}
+	\begin{large}\textbf{2.81 - 7 Sep 2006}\end{large}
+	\begin{list}{-}{}
+		\item{Support für Memory Sticks größer als 4GB}
+		\item{libtiff Exploit gefixt}
+	\end{list}
+\end{slide}
+
+\begin{slide}{2.xx Kernel}
+	\begin{large}\textbf{2.82 - 26 Oct 2006}\end{large}
+	\begin{list}{-}{}
+		\item{Diverse Sicherheitspatches}
+	\end{list}
+\end{slide}
+
+\begin{slide}{3.xx Kernel}
+	\begin{large}\textbf{3.00 - 21 Nov 2006}\end{large}
+	\begin{list}{-}{}
+		\item{Playstation 3 Remote Play}
+		\item{PSOne Emulator - Fullspeed(!)}
+		\item{Musikvisualisierung}
+	\end{list}
+	\begin{large}\textbf{3.01 - 22 Nov 2006 \&  3.02 - 6 Dec 2006}\end{large}
+	\begin{list}{-}{}
+		\item{Playstation Network Titelunterstützung verbessert\/erweitert}
+	\end{list}
+	\begin{large}\textbf{3.03 - 20 Dec 2006}\end{large}
+	\begin{list}{-}{}
+		\item{Playstation Network Titelunterstützung verbessert\/erweitert}
+		\item{Unterstützung der PSPCam}
+	\end{list}
+\end{slide}
+
+\begin{slide}{3.xx Kernel}
+	\begin{large}\textbf{3.10 - 30 Jan 2007 *}\end{large}
+	\begin{list}{-}{}
+		\item{Dynamischer Normalizer}
+		\item{Möglichkeit zum reservieren von Speicher hinzugefügt}
+		\item{Im Geheimen Reparatur des sceRegOpenRegistry und des GTA Exploits}
+	\end{list}
+	\begin{large}\textbf{3.11 - 8 Feb 2007 *}\end{large}
+	\begin{list}{-}{}
+		\item{Playstation Network Titel können resettet werden}
+	\end{list}
+	\begin{large}\textbf{3.30 - 28 Mar 2007 *}\end{large}
+	\begin{list}{-}{}
+		\item{Thumbnail Support im RSS Reader}
+		\item{MP4\/H264 unterstützen nun auch weitere Äuflösungen: 352x480, 480x272, 720x480}
+		\item{Wireless Hotspot Funktion hinzugefügt.}
+	\end{list}
+\end{slide}
+
+\begin{slide}{3.xx Kernel}
+	\begin{large}\textbf{3.40 - 20 Apr 2007}\end{large}
+	\begin{list}{-}{}
+		\item{Playstation Network Titelunterstützung verbessert\/erweitert.}
+		\item{Zertifikats Option entfernt}
+		\item{Savegames des PSOne Emulators mit denen des Emulators der PS3 kompatibel gemacht.}
+	\end{list}
+	\begin{large}\textbf{3.50 - 31 May 2007}\end{large}
+	\begin{list}{-}{}
+		\item{Remote Play via Internet möglich}
+		\item{RSS Channel Guide hinzugefügt.}
+		\item{CPU Limit entfernt, möglich mit 333MHz statt 266MHz zu nutzen.}
+	\end{list}
+	\begin{large}\textbf{3.51 - 29 Jun 2007}\end{large}
+	\begin{list}{-}{}
+		\item{Illuminati Exploit gefixt}
+	\end{list}
+\end{slide}
+
+\begin{slide}{3.xx Kernel}
+	\begin{large}\textbf{3.52 - 24 Jul 2007}\end{large}
+	\begin{list}{-}{}
+		\item{Playstation Network Titelunterstützung verbessert\/erweitert.}
+	\end{list}
+	\begin{large}\textbf{3.60 - 10 Sep 2007}\end{large}
+	\begin{list}{-}{}
+		\item{Erste Slim Firmware, führte Slim Features ein.}
+	\end{list}
+	\begin{large}\textbf{3.70 - 11 Sep 2007 *}\end{large}
+	\begin{list}{-}{}
+		\item{Erste Universelle Firmware}
+		\item{Custom Themes}
+		\item{Video: 2Mbit\/s Bitratengrenze(vorher 768Kbit\/s), Szenensuche, Sequenzielles Playback}
+		\item{Musik hören während des betrachtens von Fotos möglich} 
+	\end{list}
+\end{slide}
+
+\begin{slide}{3.xx Kernel}
+	\begin{large}\textbf{3.71 - 13 Sep 2007}\end{large}
+	\begin{list}{-}{}
+		\item{Mal wieder einiges an Verbesserungen der \Anf{Sicherheit}}
+		\item{Playstation Network Titelunterstützung verbessert\/erweitert.}
+		\item{Einstellungen für manche Regionen korrigiert.}
+	\end{list}
+	\begin{large}\textbf{3.72 - 30 Oct 2007}\end{large}
+	\begin{list}{-}{}
+		\item{Playstation Network Titelunterstützung verbessert\/erweitert.}
+		\item{Remote Start hinzugefügt(benötigt PS3)}
+	\end{list}
+	\begin{large}\textbf{3.73 - 29 Nov 2007}\end{large}
+	\begin{list}{-}{}
+		\item{Systemstabilität wiederhergestellt, einige Probleme mit dem UMD Laufwerk behoben.}
+	\end{list}
+\end{slide}
+
+
+
+\section{Quellen}
+\begin{slide}{Zur Recherche/Verifizierung benutzt}
+	\begin{list}{-}{}
+		\item{http://alek.dark-alex.org/pspwiki/}
+	\end{list}
+\end{slide}
+
 \end{document}
