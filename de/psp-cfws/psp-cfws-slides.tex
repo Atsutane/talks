@@ -457,7 +457,7 @@
 \end{slide}
 
 \begin{slide}{5.xx Homebrewenabler}
-	\begin{large}\textbf{5.03 HEN}\end{large}\linebreak
+	\begin{large}\textbf{5.03 HEN}\end{large}
 	\begin{list}{-}{}
 		\item{15. April 2009: Davee veröffentlicht ein auf einem von ihm entdeckten libtiff Exploit basierendes Hello World, 
 			welches auf sämtlichen Modellen funktioniert.}
@@ -469,6 +469,36 @@
 			Usern, der libtiff Exploit wurde in FW 5.50 gefixt.} 
 	\end{list}	
 \end{slide}
+
+%% Homebrew Geschichte + kurze Exploit Übersicht
+\begin{slide}{Homebrew - Geschichte}
+	\begin{large}\textbf{Firmware 1.00}\end{large}
+	\begin{list}{-}{}
+		\item{April 2005: Durch einen DNS Trick im Content Downloader von Wipeout Pure ist es möglich, auf die UMD zu
+			zuzugreifen, das EBOOT Format wird von NEM und dem \Anf{Saturn Expedition Committee} reverse-engineered.}
+		\item{Mai 2005: Hello World wird für FW 1.00 veröffentlicht, da bis dato keinerlei Checks des Codes vorhanden sind,
+			lässt sich eben jener leicht mittels modifiziertem GCC und Binutils fabrizieren.}
+		\item{Außerdem wurde es möglich UMDs zu dumpen und vom Memory Stick wie eine normale UMD zu starten.}
+	\end{list}
+\end{slide}
+
+\begin{slide}{Homebrew - Geschichte}
+	\begin{large}\textbf{Firmware 1.50}\end{large}
+	\begin{list}{-}{}
+		\item{15. Juni 2005: Spanische Entwickler veröffentlichen Swaploit, vorm starten der gewünschten Homebrew Applikation
+			wird der Memory Stick getauscht - nicht sehr stabil.}
+		\item{Killer-X entwickelt den KXploit, welcher die sprintf Funktion verwendet um Homebrew zu starten, indem es zwei 
+			Ordner gibt, welche jener Applikation zugehörig sind, einer \textbf{abc} und der andere \textbf{abc\%} benannt.
+			Der \% Ordner enthält nur ein Bild und die PARAM.SFO Datei, der andere eine zu EBOOT.PBP umbenannte DATA.PSP,
+			die ausführbare Datei. Das Problem, dass nun pro Homebrew auch ein zweiter Eintrag mit korrupten Daten im XMB
+			gelistet wird, wird entweder über einen Exploit im FAT16 System oder über das Namensschema \%\_\_SCE\_\_name
+			\_\_SCE\_\_name umgangen.}
+		\item{No-KXploit Patch: Da die Verwendung zweier Ordner doch eher störend war, wurde der No-KXploit Patch entwickelt,
+			eine Homebrew Applikation, welche die Firmware im RAM modifizierte und so den KXPloit für andere Programme unnötig
+			machte, dieser Patch wurde später auch in die meisten Custom Firmwares integriert.}
+	\end{list}
+\end{slide}
+
 
 
 \section{Quellen}
