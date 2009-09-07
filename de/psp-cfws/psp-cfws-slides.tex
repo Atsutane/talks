@@ -72,6 +72,8 @@
 
 
 
+%% Nur zum Nachschlagen gedacht, die wichtigen werden kurz angesprochen.
+%% Mit * markierte enthalten nicht alle bekannten Änderungen gelistet.
 \section{Historie der Sony Firmwares}
 \begin{slide}{1.xx Kernel}
 	\begin{large}\textbf{1.00 - 12 Dec 2004}\end{large}
@@ -358,6 +360,78 @@
 	\end{list}
 \end{slide}
 
+\section{Exploits}
+\begin{slide}{Typen}
+	\begin{large}\textbf{Downgrader}\end{large}\linebreak
+	Exploits welche das aufspielen älterer Firmwares ermöglichen, nur für die PSP 1000 interessant, da es so möglich war die Firmware 1.50 zu verwenden.\linebreak
+	\linebreak
+	\begin{large}\textbf{Homebrewenabler}\end{large}\linebreak
+	Exploits, welche das starten von Homebrewapplikationen auf verschiedenen Sony Firmwares ermöglichen, vor allem für die
+	späteren PSP 2000 Modelle und das PSP 3000 Modell von Relevanz.\linebreak
+	\linebreak
+	\begin{large}\textbf{Homebrew}\end{large}\linebreak
+	Exploits welche das starten von nicht signiertem Code ermöglichen.\linebreak
+	\linebreak
+	\begin{large}\textbf{Pandora's Battery}\end{large}\linebreak
+	Hat ein eigenes Kapitel nach den Custom Firmwares.
+\end{slide}
+
+%% Leider nur bei einigen die Funktionsweise gefunden
+\begin{slide}{Downgrader}
+	\begin{large}\textbf{1.50 Downgrader auf 1.0}\end{large}\linebreak
+	Aufgrund der Homebrewinkompatibilität zu 1.50er Homebrew nicht interessant.\linebreak
+	\linebreak
+	\begin{large}\textbf{2.00 Downgrader}\end{large}\linebreak
+	Der erste Downgrader für die Firmware 2.00 wurde von Fanjita entwickelt und setzte über einen Bug in der libtiff die
+	Firmware Version auf 1.00, so dass die PSP das Update auf 1.50 annahm, da sie glaubte es sei ein Update.\linebreak
+	\linebreak
+	\begin{large}\textbf{2.01 Downgrader}\end{large}\linebreak
+	Selbe Funktionsweise wie der Downgrader für 2.00 allerdings über eine andere Lücke in der libtiff, da die im anderen
+	Exploit verwendete mit dieser Firmware geschlossen wurde.\linebreak
+	\linebreak
+	\begin{large}\textbf{2.50/2.60 Downgrader}\end{large}\linebreak
+	Funktionsweise nicht bekannt. Funktionierte allerdings nicht auf Modellen mit den TA-082 und TA-086(Brick).
+\end{slide}
+
+\begin{slide}{Downgrader}
+	\begin{large}\textbf{2.71 Downgrader - 1 Sep 2006 (FW 30 May 2006)}\end{large}\linebreak
+	Von Dark Alex veröffentlicht, abermals über einen Bug in der libtiff. Nach wie vor für TA-082 Boards unmöglich.\linebreak
+	\linebreak
+	\begin{large}\textbf{2.71 Downgrader TA-082 - 27 Dec 2006 (FW 30 May 2006)}\end{large}\linebreak
+	Von Dark Alex, harleyg und Mathieulh veröffentlicht, machte das installieren von FW 1.50 auf TA-082 PSPs welche mit
+	2.71 ausgeliefert wurden möglich, dies war zuvor durch Inkompatibilität einiger IDStorage Keys nicht möglich, diese
+	wurden nun ausgetauscht und erst dann der eigentliche Vorgang ausgeführt.
+\end{slide}
+
+\begin{slide}{Downgrader}
+	\begin{large}\textbf{2.80 Downgrader - (FW 27 Jul 2006)}\end{large}
+	\begin{list}{-}{}
+		\item{23 Dec 2006: Von 0okm veröffentlicht. }
+		\item{24 Dec 2006: csfreakno1 veröffentlicht eine Benutzerfreundlichere Variante von 0okms Exploit.}
+		\item{2 Jan 2007: 0okm veröffentlicht einen 2.80 auf 2.71 Downgrader für TA-082/TA-086 PSPs, um diese im Anschluss mit
+			Dark Alex Downgrader auf FW 1.50 zu bringen.}
+		\item{Später veröffentlichte Team NOOBZ(u.a. Fanjita) einen sichereren Downgrader, welcher auf Dark Alex HEN basierte
+			und direkt auf Version 1.50 downgradete, indem direkt überprüft wurde ob es sich um ein TA-082/TA-086 Modell
+			handelte und die entsprechenden Schritte durchgeführt wurden.}
+	\end{list}
+\end{slide}
+
+\begin{slide}{Downgrader}
+	\begin{large}\textbf{3.03 Downgrader - (FW 20 Dec 2006)}\end{large}\linebreak
+	%% Veröffentlichungsdatum des Exploits stimmt nicht mit pspwiki überein, allerdings laut Newssites korrekt
+	Team NOOBz veröffentlichte interessanterweise nur etwa einen Monat nach Release einen Downgrader für 3.03 welcher den 8.
+	Slot(Autoload) eines ungepatchten GTA: Liberty City Stories verwendete um mittels Goofy Exploit jedwede PSP auf FW 1.50
+	zu downgraden.\linebreak
+	\linebreak
+	\begin{large}\textbf{3.50 Downgrader - 26 Jun 2007 (FW 31 May 2007)}\end{large}\linebreak
+	NOObz verwendet den Illuminati (Lumines) Exploit in Kombination mit einem 3.50 kernel exploit.\linebreak
+	\linebreak
+	\begin{large}\textbf{3.11 Downgrader - 10 Sep 2007 (FW 8 Feb 2007)}\end{large}\linebreak
+	Da nicht jede PSP bis 3.50 geflasht werden kann veröffentlicht Fanjita diesen Downgrader, der wie der 3.50er den Illiminati
+	Exploit verwendet.\linebreak
+	\linebreak
+	\textbf{Alle Firmwares bis 3.50 können entweder direkt oder über Umweg mit Firmware 1.50 geflasht werden. Mit Ausnahme des PSP 1007 Modells(Taiwan).} 
+\end{slide}
 
 
 \section{Quellen}
