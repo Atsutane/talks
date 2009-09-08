@@ -1,4 +1,4 @@
-\documentclass[mode=print,paper=screen,style=jefka]{powerdot}
+\documentclass[mode=print,paper=screen,size=10pt,style=paintings]{powerdot}
 \usepackage[utf8x]{inputenc}
 \usepackage{graphicx}
 \usepackage{ngerman}
@@ -10,7 +10,7 @@
 \author{Thorsten 'Atsutane' Toepper}
 \title{PSP - Geschichte der Custom Firmwares}
 
-\pdsetup{palette=white}
+\pdsetup{palette=GoldenGate}
 \begin{document}
 
 \maketitle
@@ -33,8 +33,9 @@
 		\item{32Bit MIPS CPU (333 MHz)}
 		\item{32MB RAM}
 	\end{list}
+\end{slide}
 
-	\begin{LARGE}\textbf{PSP 2000 / Slim\&Lite}\end{LARGE}
+\begin{slide}{PSP 2000 / Slim\&Lite}
 	\begin{list}{-}{}
 		\item{Erschien im September 2007 in Europa}
 		\item{Gewicht um 33\% verringert}
@@ -56,7 +57,7 @@
 
 
 \section{Begriffserläuterung}
-\begin{slide}{}
+\begin{slide}{Begriffserläuterung}
 	\begin{large}\textbf{Homebrew}\end{large}\linebreak
 	Nicht signierte Software von Hobbyentwicklern.\linebreak
 	\linebreak
@@ -501,7 +502,153 @@
 
 
 
-\section{Quellen}
+
+%% Nicht so ausführlich wie die Original Firmwares
+\section{Werdegang der Custom Firmwares}
+\begin{slide}{Allgemeines}
+	\begin{list}{-}{}
+		\item{Fokus der Slides liegt auf Dark Alex SE, OE und M33 Serien.}
+		\item{Features welche in der Regel sämtliche Custom Firmware bietet: \begin{list}{*}{}
+				\item{Abspielen von ISO/CSO Images und Homebrew Applikationen}
+				\item{Zugriff auf den internen Flash.}
+				\item{Seit DAX OE Serie üblich: Recovery Menü}
+			\end{list}}
+		\item{Aufbau der klassischen CFWs: Teile des 1.50 Kernels in den der CFW gepatcht.}
+		\item{Aufbau aktuellen CFWs: Es wird ein eigener IPL mitgeführt.}
+	\end{list}
+\end{slide}
+
+\begin{slide}{1.50 Kernel}
+	\begin{large}\textbf{Custom Firmware 1.50 Proof of Concept}\end{large}
+	\begin{list}{-}{}
+		\item{15 Jul 2006: Dark Alex veröffentlicht 1.50 POC, Features: \begin{list}{*}{}
+				\item{Autoboot}
+				\item{Ausführen von 1.00 FW Homebrew.}
+				\item{Einfacher Recovery Modus}
+			\end{list}}
+		\item{Es folgen einige darauf basierende Firmwares ohne nennenswerte Unterschiede.}
+	\end{list}
+	\begin{large}\textbf{Custom Firmware 1.53}\end{large}
+	\begin{list}{-}{}
+		\item{19 Feb 2007: eiffel56 veröffentlicht die auf 1.50 POC basierende 1.53 neue Features: \begin{list}{*}{}
+				\item{Custom PRX Support}
+				\item{Verstecken von korrupten Menüeinträgen.}
+				\item{Starten von ISOs.}
+				\item{No-KXPloit Patch in die Firmware integriert.}
+			\end{list}}
+	\end{list}
+\end{slide}
+
+\begin{slide}{Second Edition Serie}
+	\begin{large}\textbf{Custom Firmware 2.71 SE - OFW 30 May 2006}\end{large}
+	\begin{list}{-}{}
+		\item{8 Oct 2006: Dark Alex veröffentlicht 2.71 SE-A, welche die Kernels der Firmwares 1.50 und 2.71 vereint.}
+		\item{24 Oct 2006: 2.71 SE-B folgt und ermöglicht das spielen von CSO/ISO Images.}
+		\item{26 Oct 2006: 2.71 SE-B' kommt und erspart das einlegen einer UMD für Spiele vom Stick.}
+		\item{Wenige Tage später: 2.71 SE-B'' ermöglicht das starten von Titeln, welche eigentlich die Version 2.80 benötigen.}
+		\item{2.71 SE-C ermöglichte es dann schließlich PRX Plugins zu laden.}
+	\end{list}
+\end{slide}
+
+\begin{slide}{Open Edition Serie}
+	\begin{large}\textbf{Custom Firmware 3.02 OE - OFW 6 Dec 2006}\end{large}
+	\begin{list}{-}{}
+		\item{21 Dec 2006: Dark Alex veröffentlicht 3.02 OE-A, welche die SE-C Features enthält, Flash und WMA Support bietet 
+			\textbf{und} das DRM des PSX Emulators bricht.}
+		\item{25 Dec 2006: 3.02 OE-B folgt und ermöglicht das spielen von selbst konvertierten PSX Titeln mit dem mitgelieferten 
+			popstation Utility vom Stick.}
+	\end{list}
+	\begin{large}\textbf{Custom Firmware 3.03 OE - OFW 20 Dec 2006}\end{large}
+	\begin{list}{-}{}
+		\item{4 Jan 2007: Dark Alex veröffentlicht 3.03 OE-A, alle 3.02 OE-B Features sind enthalten, ferner lassen sich die
+			PSX Titel nun auch komprimieren.}
+		\item{6 Jan 2007: 3.03 OE-A' ermöglicht das einstellen von CPU/BUS Geschwindigkeit während des Spielens.}
+		\item{10 Jan 2007: 3.03 OE-B erforderte eine Installation von 3.03 OE-A im voraus, das Update ermöglichte das abspielen
+			von H.264/MPEG-4 AVC|MP4-AVC Videos im Vollbild Modus(480x272).}
+	\end{list}
+\end{slide}
+
+\begin{slide}{Open Edition Serie}
+	\begin{large}\textbf{Custom Firmware 3.03 OE - OFW 20 Dec 2006}\end{large}
+	\begin{list}{-}{}
+		\item{25 Jan 2007: 3.03 OE-C war wieder ein größeres Update, die maximale Video Bitrate wurde von 768 kbit/s auf 
+			16384 kbit/s erhöht, Wlan mit 333 MHz CPU ermöglicht, das verändern von CPU/BUS Geschwindigkeit im XMB ermöglicht
+			und das Kaltstarten beschleunigt.}
+	\end{list}
+	\begin{large}\textbf{Custom Firmware 3.10 OE - OFW 30 Jan 2007}\end{large}
+	\begin{list}{-}{}
+		\item{4 Feb 2007: 3.10 OE-A ermöglichte die Verwendung der 4. Helligkeitsstufe auch ohne angeschlossenes Netzteil, 
+			außerdem war das ausführen von statisch gelinkten ELF Dateien mit dem 3.10er Kernel möglich.}
+		\item{6 Feb 2007: 3.10 OE-A' behob einen kleinen Bug bezüglich der aufgrund falsch statisch gelinkter Binaries das 
+			starten einiger Spiele verhinderte.}
+	\end{list}
+\end{slide}
+
+\begin{slide}{Open Edition Serie}
+	\begin{large}\textbf{Custom Firmware 3.30 OE - OFW 28 Mar 2007}\end{large}
+	\begin{list}{-}{}
+		\item{15 Apr 2007: Bis auf den Location Free Player sind sämtliche bisherigen CFW und OFW Features enthalten.}
+		\item{20 Apr 2007: 3.30 OE-A' Sicherheitsupdate, welches einen Bug schließt, der Stellenweise das RAM überschreibt
+			und so, wenn eine Stelle Kernel erwischt es mitunter schafft, die PSP zu bricken. Außerdem wurde das Autoboot 
+			Feature wird wieder eingeführt(fiel in 3.03 OE raus).}
+	\end{list}
+	\begin{large}\textbf{Custom Firmware 3.40 OE - OFW 20 Apr 2007}\end{large}
+	\begin{list}{-}{}
+		\item{20 Apr 2007: Die selben Änderungen wie in der am selben Tag erschienen 3.30 OE-A', außerdem überprüft der
+			Installer nun, ob eine korrekte DATA.DXAR vorliegt.}
+		
+		\item{Kurz darauf kündigte Dark Alex an, sich zurückzuziehen...}
+	\end{list}
+\end{slide}
+
+\begin{slide}{M33 Serie}
+	\begin{large}\textbf{Custom Firmware 3.51M33 - OFW 29 Jun 2007}\end{large}
+	\begin{list}{-}{}
+		\item{14 Jul 2007: In der ersten Version sind sämtliche bisherigen CFW und OFW Features enthalten, angeblich
+			wurde die OE Serie reverse engineered.}
+		\item{21 Jul 2007: In den vergangenen Tagen wurden 5 Updates, hauptsächlich mit Bugfixes released, das 6. und letzte
+			offizielle M33 Update für diese Firmware erschien an diesem Tag.}
+	\end{list}
+	\begin{large}\textbf{Custom Firmware 3.52M33 - OFW 24 Jul 2007}\end{large}
+	\begin{list}{-}{}
+		\item{25 Jul 2007: Bugfix von Go!Cam, GPS und sceKernelLoadExecVSH außerdem funktionieren gekaufte PSN Titel nun 
+			ebenfalls(in 3.51M33 und einigen OEs nicht möglich).}
+		\item{30 Jul 2007: Das erste Update erscheint, WLAN wurde verbessert, formatieren des flash1 und wiederherstellen der
+			Einstellungen ist nun via Option möglich, 20MHz und 100MHz CPU Takt sind möglich, Hibernate/Power Off im USB Modus 
+			deaktiviert.}
+	\end{list}
+\end{slide}
+
+\begin{slide}{M33 Serie}
+	\begin{large}\textbf{Custom Firmware 3.52M33 - OFW 24 Jul 2007}\end{large}
+	\begin{list}{-}{}
+		\item{Am 7. August wird ein interessantes Interview veröffentlicht 	
+			\footnote{http://www.pspx.ru/forum/showthread.php?t=49651}.}
+		\item{19 Aug 2007: 3.52 M33-3 erscheint und liefert\begin{list}{*}{}
+				\item{USB Zugriff auf flash2 und flash3}
+				\item{75 MHz und 133 MHz CPU Geschwindigkeit}
+				\item{VSH Menü}
+				\item{Unterstüzung für den 3.30 OE Popsloader}
+			\end{list}}
+	\end{list}
+	Es gibt einige Berichte mit diesem Update gebrickter PSPs...
+\end{slide}
+
+\begin{slide}{M33 Serie}
+	\begin{large}\textbf{Custom Firmware 3.52M33 - OFW 24 Jul 2007}\end{large}\linebreak
+	...Grund dafür war, dass der Admin von ps3news.com anscheinend M33 Code in die Finger bekommen hatte, weswegen das Update
+	PSPs, welche ps3news.com in der Browser History hatten brickte.
+	\begin{list}{-}{}
+		\item{21 Aug 2007: 3.52 M33-4 wird veröffentlicht:\begin{list}{*}{}
+				\item{Etliche Bugfixes}
+				\item{75 MHz und 133 MHz CPU Geschwindigkeit nun via vshmenü einstellbar}
+			\end{list}}
+	\end{list}
+\end{slide}
+
+
+
+\section{Sonstiges und Quellen}
 \begin{slide}{Zur Recherche/Verifizierung benutzt}
 	\begin{list}{-}{}
 		\item{http://alek.dark-alex.org/pspwiki/}
