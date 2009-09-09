@@ -23,7 +23,7 @@
 %%Historie der Sony Firmwares
 %%Kurze Betrachtung einiger Exploits
 %%Historie der Custom Firmwares
-%%Pandora's Battery und Magic Memory Stick
+%%Pandora's Battery
 
 \section{Vorstellung der PSP Modelle}
 \begin{slide}{PSP 1000 / FAT}
@@ -648,7 +648,7 @@
 	\begin{list}{-}{}
 		\item{10 Sep 2007: 3.60 M33 wird für die PSP 2000 veröffentlicht.}
 		\item{Aufgrund von Motherboard Inkompatibilitäten enthalten die folgenden Firmwares keinen 1.50 Kernel.}
-		\item{Die CFW musste mittels Pandora's Battery und Magic Memory Stick installiert werden.} 
+		\item{Die CFW musste mittels Pandora's Battery installiert werden.} 
 	\end{list}
 \end{slide}
 
@@ -717,15 +717,53 @@
 
 
 
+%% Pandora's Battery
+\section{Pandora's Battery - Die JigKick Battery und der Magic Memory Stick}
+\begin{slide}{Allgemeines}
+	\begin{list}{-}{}
+		\item{Am 22 August 2007 von Team C+D veröffentlicht.}
+		\item{Teilt sich in die JigKick Battery und den Magic Memory Stick auf.}
+		\item{Bootet die PSP beim einlegen in den Service Mode und erlaubt das flashen beliebiger Daten auf den internen Flash
+			sämtlicher PSP Modelle bis zum PSP 2000 Modell mit TA-088v3 Motherboard.}
+	\end{list}
+\end{slide}
+
+\begin{slide}{Funktionsweise}
+	\begin{large}\textbf{JigKick Battery}\end{large}
+	\begin{list}{-}{}
+		\item{Serial der Batterie wird auf 0xFFFFFFFF gesetzt}
+		\item{Beim einlegen der JigKick Battery bootet die PSP vom 16. physischem Datenblock des Datenträgers
+			(Magic Memory Stick) anstatt vom internen flash0.}
+	\end{list}
+	\begin{large}\textbf{Magic Memory Stick}\end{large}
+	\begin{list}{-}{}
+		\item{Das gewünschte Programm wird auf den Memory Stick entpackt und der zugehörige IPL auf den 16. Block geschrieben.}
+		\item{Es können nur Memory Sticks des Pro Duo Typs bis zu einer Größe von 4GB zu Magic Memory Sticks konvertiert
+			werden.}
+		\item{Es ist möglich sämtliche PSP 1000 Modelle auf FW 1.50 zu flashen, oder auf alle Modelle bis zu jenen mit TA-088v3
+			Boards die M33 Firmwares ab Version 3.71M33 zu flashen, das starten vereinzelter Homebrew Applikationen ist
+			ebenfalls möglich.}
+	\end{list}
+\end{slide}
+
+
+
 \section{Sonstiges und Quellen}
 \begin{slide}{Zur Recherche/Verifizierung benutzt}
 	\begin{list}{-}{}
-		\item{http://alek.dark-alex.org/pspwiki/}
-		\item{http://www.qj.net/}
-		\item{http://www.portable-news.de/ *}
-		\item{http://www.pspsource.de/ *}
+		\item{\url{http://alek.dark-alex.org/pspwiki/}}
+		\item{\url{http://www.qj.net/}}
+		\item{\url{http://www.portable-news.de/} *}
+		\item{\url{http://www.pspsource.de/} *}
 	\end{list}
-	Mit * markierte Adressen sind nicht sehr zuverlässig, zur Verifizierung einiger Daten dennoch geeignet.
+	Mit * markierte Adressen sind nicht sehr zuverlässig, zur Verifizierung einiger Daten dennoch geeignet.\linebreak
+	\linebreak\linebreak
+	\begin{large}\textbf{Sonstiges}\end{large}
+	\begin{list}{-}{}
+		\item{\href{http://dewy.fem.tu-ilmenau.de/CCC/24C3/matroska/24c3-2209-en-playstation_portable_cracking.mkv}{24c3 Talk}}
+		\item{Toolchain: svn://svn.ps2dev.org/psp/trunk/psptoolchain}
+	\end{list}
+	Danke an sECuRE für den powerdot Tipp, AVGP, BadBoy\_, Eiffel56 und Latino\_Heat für Hinweise und Erinnerungen.
 \end{slide}
 
 \end{document}
