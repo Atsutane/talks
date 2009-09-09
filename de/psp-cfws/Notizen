@@ -19,5 +19,6 @@ Custom Firmwares
 
 Pandora's Battery
 	* JigKick: Alternativ den Flash der Battery unlesbar machen
+	* JigKick: Ändern der Serial über Kernelfunktionen möglich.
 	* Magic Memory Stick kann auch mittels anderer Geräte konvertiert werden(PC)
 
