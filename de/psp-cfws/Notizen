@@ -1,0 +1,19 @@
+Diese Datei enthält einige Stichpunkte die bei den entsprechenden Folien
+erwähnt werden sollten.
+
+HEN
+	* Seit PSP 2000 mit TA-088v3 wieder am aufkeimen, da dieses und nachfolgende Modelle bisher nicht flashbar sind.
+	* GTA: LCS kam ursprünglich mit FW 2.00 heraus
+	* Noch gibt es keinen offiziellen HEN für Firmware > 5.03
+
+Homebrew
+	* Sowohl die PSP als auch die PS2 haben MIPS Prozessoren, deswegen basiert die PSP Toolchain teilweise auch auf der der PS2
+
+Custom Firmwares
+	* 1.53 wurde für Leute die der SE und den ersten OE Versionen noch nicht trauten entwickelt.
+	* 3.02 OE-A brach das DRM des PSX Emu in gerade mal einem Monat.
+
+Pandora's Battery
+	* JigKick: Alternativ den Flash der Battery unlesbar machen
+	* Magic Memory Stick kann auch mittels anderer Geräte konvertiert werden(PC)
+

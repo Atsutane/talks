@@ -1,0 +1,6 @@
+PSP - Geschichte der Custom Firmwares
+
+Depends:
+ArchLinux:
+	texlive-pstricks
+
