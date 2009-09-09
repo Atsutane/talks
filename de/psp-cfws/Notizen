@@ -12,6 +12,7 @@ Homebrew
 Custom Firmwares
 	* 1.53 wurde für Leute die der SE und den ersten OE Versionen noch nicht trauten entwickelt.
 	* 3.02 OE-A brach das DRM des PSX Emu in gerade mal einem Monat.
+	* 3.03 OE-C machte den Zugriff auf den internen Flash, über das Recovery Menü möglich. 
 
 Pandora's Battery
 	* JigKick: Alternativ den Flash der Battery unlesbar machen
