@@ -37,6 +37,26 @@
 \end{slide}
 
 \begin{slide}{Beispiele}
-
+	\begin{itemize}
+		\item{pacman -S $<$Paket$>$}
+		\item{pacman -Ss $<$Suchbegriff$>$
+			\footnote{Optionen auch mit -Q verf"{u}gbar}
+		}
+		\item{pacman -Si $<$Paket$>$¹}
+		\item{pacman -Syu
+			\begin{itemize}
+				\item{\textit{y} synchronisiert die Datenbank mit dem Mirror}
+				\item{\textit{u} aktualisiert die installierten Pakete}
+			\end{itemize}
+		}
+		\item{pacman -Rscn $<$Paket$>$
+			\begin{itemize}
+				\item{\textit{s} entfernt Pakete von denen nur dieses Paket
+					abh"{a}ngt}
+				\item{\textit{c} entfernt Pakete die von diesem abh"{a}ngen}
+				\item{\textit{n} entfernt auch die Konfigurationsdateien}
+			\end{itemize}
+		}
+	\end{itemize}
 \end{slide}
 
