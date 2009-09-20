@@ -2,6 +2,7 @@
 * Geschichte (ein Slide in der "Was ist Arch Linux?" Sektion)
 * Pacman
 * ABS und AUR
+* /etc/rc.conf (Initsystem)
 * Installation
 * Community
 * Trusted User System und Unterschied zu Devs
