@@ -29,10 +29,10 @@ install-style: copy-style
 	fmtutil --all
 
 replace-special-chars:
-	sed -i 's+ä+\"{a}+g' slides/*.tex
-	sed -i 's+ö+\"{o}+g' slides/*.tex
-	sed -i 's+ü+\"{u}+g' slides/*.tex
-	sed -i 's+Ä+\"{A}+g' slides/*.tex
-	sed -i 's+Ö+\"{O}+g' slides/*.tex
-	sed -i 's+Ü+\"{U}+g' slides/*.tex
+	sed -i 's+ä+\\"{a}+g' slides/*.tex
+	sed -i 's+ö+\\"{o}+g' slides/*.tex
+	sed -i 's+ü+\\"{u}+g' slides/*.tex
+	sed -i 's+Ä+\\"{A}+g' slides/*.tex
+	sed -i 's+Ö+\\"{O}+g' slides/*.tex
+	sed -i 's+Ü+\\"{U}+g' slides/*.tex
 
