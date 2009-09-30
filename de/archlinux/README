@@ -20,4 +20,14 @@ Geplant sind zwei Dokumente, zum einen Slides zum anderen eine Stichwortliste
 zu den Slides, welche die dortigen Punkte nochmals ein wenig umfangreicher
 darstellt, um das Vergessen von Details weiter zu unterbinden und das
 beantworten von Fragen des Publikums zu erleichtern.
+Eventuell kommt ein weiteres hinzu, welches als Handout fungiert und die Folien
+nochmals schriftlich erläutert, die Vortragshilfe für den Vortragenden könnte
+eine Zusammenfassung dieses Dokuments sein, welches man auch einfach mittels
+Script und Markierungen erstellen könnte.
+
+Dateien
+=======
+Neben der archlinux-de-slides.tex gehören die Dateien im slides Ordner zur
+Vortragspräsentation, die Dateien im samples Ordner können in jede Datei
+eingebunden werden, ihre Verwendung sollte jedoch sichergestellt sein.
 
