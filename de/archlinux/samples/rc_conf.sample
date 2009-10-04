@@ -1,0 +1,17 @@
+LOCALE="de_DE.utf8"
+HARDWARECLOCK="local"
+USEDIRECTISA="no"
+TIMEZONE="Europe/Berlin"
+KEYMAP="de-latin1-nodeadkeys"
+CONSOLEFONT=
+CONSOLEMAP=
+USECOLOR="yes"
+
+MOD_AUTOLOAD="yes"
+MODULES=(!pcspkr gspca_spca561 loop kqemu)
+
+USELVM="no"
+HOSTNAME="hell"
+NETWORKS=(ethernet)
+
+DAEMONS=(syslog-ng net-profiles crond hal alsa sshd)
