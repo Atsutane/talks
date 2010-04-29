@@ -1,0 +1,105 @@
+%% Licensed as Creative Commons 3.0 BY SA
+%% Authors: Thorsten 'Atsutane' Toepper
+
+\begin{slide}{Allgemeines}
+	\begin{itemize}
+		\item{pacman ist in C geschrieben}
+		\item{Konfigurationsdateien
+			\begin{itemize}
+				\item{/etc/pacman.conf}
+				\item{/etc/pacman.d/mirrorlist}
+			\end{itemize}
+		}
+		\item{Die standardm\"{a}ßig aktiven Repositories sind:
+			\begin{itemize}
+				\item{core}
+				\item{extra}
+				\item{community}
+			\end{itemize}
+		}
+		\item{Daneben verf\"{u}gbar sind:
+			\begin{itemize}
+				\item{testing}
+				\item{community-testing}
+			\end{itemize}
+		}
+	\end{itemize}
+\end{slide}
+
+\begin{slide}{Verwendung}
+	\begin{itemize}
+		\item{pacman $<$Schalter$>$ [Optionen] $<$Pakete$>$}
+		\item{Wichtige Schalter sind:
+			\begin{itemize}
+				\item{-Q: Abfragen der Paketdatenbank mit den installierten
+					Paketen.}
+				\item{-S: Abfragen der Paketdatenbank und installieren von
+					Paketen.}
+				\item{-R: Entfernen von Paketen.}
+				\item{-U: Installieren lokaler Pakete.}
+			\end{itemize}
+		}
+	\end{itemize}
+\end{slide}
+
+\begin{slide}{Beispiele}
+	\begin{itemize}
+		\item{pacman -S $<$Paket$>$}
+		\item{pacman -Ss $<$Suchbegriff$>$
+			\footnote{Optionen auch mit -Q verf\"{u}gbar}
+		}
+		\item{pacman -Si $<$Paket$>$¹}
+		\item{pacman -Syu
+			\begin{itemize}
+				\item{\textit{y} synchronisiert die Datenbank mit dem Mirror}
+				\item{\textit{u} aktualisiert die installierten Pakete}
+			\end{itemize}
+		}
+		\item{pacman -Rscn $<$Paket$>$
+			\begin{itemize}
+				\item{\textit{s} entfernt Pakete von denen nur dieses Paket
+					abh\"{a}ngt}
+				\item{\textit{c} entfernt Pakete die von diesem abh\"{a}ngen}
+				\item{\textit{n} entfernt auch die Konfigurationsdateien}
+			\end{itemize}
+		}
+	\end{itemize}
+\end{slide}
+
+\begin{slide}{Paketformat}
+	\begin{itemize}
+		\item{name-version-release-architektur.pkg.tar.gz
+			\begin{itemize}
+				\item{gzip komprimierter Tarball}
+			\end{itemize}
+		}
+		\item{.PKGINFO
+			\begin{itemize}
+				\item{pkgname}
+				\item{pkgver}
+				\item{pkgdesc}
+				\item{url}
+				\item{builddate}
+				\item{packager}
+				\item{size}
+				\item{arch}
+				\item{license}
+			\end{itemize}
+		}		
+	\end{itemize}
+\end{slide}
+
+%% Das Slide soll nur kurz behandelt werden
+\begin{slide}{Mitgelieferte Skripte}
+		\begin{itemize}
+			\item{makepkg}
+			\item{rankmirrors}
+			\item{repo-add / repo-remove}
+			\item{vercmp}
+			\item{testpkg}
+			\item{pkgdelta}
+			\item{testdb}
+			\item{pacman-optimize}
+		\end{itemize}
+\end{slide}
+

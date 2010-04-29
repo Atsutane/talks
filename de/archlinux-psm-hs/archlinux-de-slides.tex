@@ -1,0 +1,74 @@
+%% Licensed as Creative Commons 3.0 BY SA
+%% Authors: Thorsten 'Atsutane' Toepper
+
+\documentclass[mode=print,paper=screen,size=10pt,style=horatio]{powerdot}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{ngerman}
+\usepackage{url}
+\usepackage{listings}
+
+\newcommand{\Anf}[1]{\glqq #1\grqq}
+
+\lstset{
+	basicstyle=\footnotesize\ttfamily,
+	numbers=left,
+	numberstyle=\tiny,
+	xleftmargin=10pt,
+	numbersep=10pt,
+}
+
+\author{Atsutane}
+\title{Arch Linux - Eine einfache, schlanke Linux Distribution}
+
+\pdsetup{palette=default}
+\begin{document}
+
+\maketitle
+\begin{slide}{Inhalt}
+  \tableofcontents[content=sections]
+\end{slide}
+
+%% Ein Slide zur Vorstellung des Autors
+\include{slides/autor}
+
+%% Wie auch in den Wikis eine Vorstellung der Distribution 
+\section{Was ist Arch Linux?}
+\include{slides/wasistarchlinux}
+
+%% Kurze Erläuterung Pacmans
+\section{Pacman}
+\include{slides/pacman}
+
+%% Eine genauere Betrachtung des ABS, PKGBUILDs und des AURs
+\section{ABS und AUR}
+\include{slides/abs}
+
+%% Ein kurzer Blick auf unseren Umgang mit Einstellungen, Kernelmodulen
+%% und DAEMONs. Kurz: rc.conf und Initsystem
+\section{Systemkonfiguration und Initsystem}
+\include{slides/initsystem}
+
+%% Eine Erklärung des Aufgabenbereiches von Devs und 
+%% Trusted Usern, Gegenüberstellung um den Aufbau der
+%% Community zu erklären
+\section{Developer \& Trusted User}
+\include{slides/tusystem}
+
+%% Eine minimale Beschreibung einer Installation auf welcher
+%% aufbauend dargestellt werden kann in welche Richtung man
+%% mit einem Arch System gehen kann (Server, Desktop, Laptop).
+\section{Installation}
+\include{slides/installation}
+
+%% Ansprache der Unterteilung der Community in regionaler
+%% und anderer Hinsicht und Nennung einiger zur Community
+%% gehörender Projekte (bspw. Chakra)
+\section{Community}
+\include{slides/community}
+
+\end{document}
