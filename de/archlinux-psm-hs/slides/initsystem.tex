@@ -3,28 +3,35 @@
 
 \begin{slide}{Aufbau der Systemkonfiguration}
 	\begin{itemize}
-		\item{BSD artig zentral \"{u}ber eine Datei
+		\item{Konfiguration erfolgt BSD-artig \"{u}ber eine Datei
 			\begin{itemize}
-				\item{\textit{/etc/rc.conf}
-					\lstinputlisting{samples/rc_conf.sample}
-				}
+				\item{Tastaturlayout f\"{u}r die TTYs}
+				\item{Sprache f\"{u}r das System}
+				\item{Zeitzone}
+				\item{DAEMONs}
 			\end{itemize}
 		}
-
 	\end{itemize}
 \end{slide}
 
 
 \begin{slide}{Stufen des Initsystems}
+	\begin{itemize}
+		\item{Verwendung verschiedener Runlevel:}
+	\end{itemize}
 	\begin{tabular}{|c|c|}
 		\hline Level & Funktion\\
 		\hline 0 & Halt\\
 		\hline 1 & Single-User\\
-		\hline 2 & Nicht benutzt\\
 		\hline 3 & Multi-User (Standard)\\
-		\hline 4 & Nicht benutzt\\
 		\hline 5 & X11\\
 		\hline 6 & Reboot\\
 		\hline
 	\end{tabular}
+	\begin{itemize}
+		\item{Kernel l\"{a}d}
+		\item{udev erkennt System}
+		\item{Partitionen werden eingeh\"{a}ngt}
+		\item{DAEMONs werden gestartet}
+	\end{itemize}
 \end{slide}

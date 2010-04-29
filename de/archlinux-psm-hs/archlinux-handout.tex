@@ -1,0 +1,35 @@
+\documentclass[10pt,DIV14,twocolumn]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{url}
+
+\author{Thorsten T\"{o}pper - Hochschule Mannheim Proseminar}
+\title{Arch Linux - Eine einfache, schlanke Linux Distribution}
+
+\begin{document}
+\maketitle
+\section*{Begriffserl\"{a}uterung}
+\begin{itemize}
+	\item{\textbf{Linux Distribution:} Ein Betriebssystem, welches den Linux Kernel verwendet.}
+	\item{\textbf{Paketverwaltung:} Programm welches zentral die Installation und Deinstallation von Programmpaketen handhabt.}
+	\item{\textbf{Repository:} Datenbank auf einem Server, welche der Paketverwaltung als Quelle f\"{u}r Softwarepakete dient.}
+	\item{\textbf{Shell:} Ein Programm zur Befehlseingabe und -verarbeitung, Beispiele: bash, zsh, DOS-Kommandozeile}
+	\item{\textbf{Tarball:} Gebr\"{a}uchliche Bezeichnung f\"{u}r Tar-Archive ungeachtet der verwendeteten Kompression.}
+\end{itemize}
+
+\section*{Allgemein: Linux}
+Linux-Distributionen bestehen in der Regel aus dem Kernel, einer Paketverwaltung und einer Shell, Desktop-Systeme verwenden außerdem den X11-Server zur Darstellung grafischer Bildelemente und darauf aufbauend eine Desktop-Umgebung.
+
+\section*{Arch Linux}
+Arch\footnote{\url{http://www.archlinux.org}} basiert auf der Verteilung von Bin\"{a}rpaketen, die Software wird also bereit zur Installation aus den Repositories bezogen, sowie dem Rolling Release Modell, was bedeutet, dass es keine Versionen des Betriebsystems gibt, sondern dass das System mittels der Paketverwaltung \textbf{pacman} fortw\"{a}hrend aktualisiert wird. Das System ist f\"{u}r die CPU Architekturen \textit{i686}(32 Bit) und \textit{x86\_{}64}(64 Bit) verf\"{u}gbar. Das Grundprinzip der Distribution ist Minimalismus in Form von Schlichtheit, die Installation bringt nur die Basisprogramme mit, der Benutzer erh\"{a}lt eine Shell, Texteditor und Compiler und kann das System in die gew\"{u}nschte Richtung konfigurieren, sei es ein Serversystem oder ein Desktopsystem. Das Initsystem ist BSD-artig aufgebaut, der Systemkern(u.a. Dienste und Netzwerk) wird haupts\"{a}chlich mittels einer Datei zentral konfiguriert.
+
+\section*{Paketaufbau}
+Pakete f\"{u}r \textbf{pacman} werden mit Hilfe einfacher Textdateien, so genannten \textbf{PKGBUILD}s und dem \textbf{makepkg} Skript generiert. Ein \textbf{PKGBUILD} enth\"{a}lt die Daten \"{u}ber das zu generierende Paket unter anderem den Paketnamen,  die Paketversion, die Quelle des Programmcodes, Abh\"{a}ngigkeiten und weitere Informationen, außerdem beschreibt eine Funktion welche Befehle zur Erstellung und Installation ausgef\"{u}hrt werden m\"{u}ssen. \textbf{makepkg} bezieht den Quellcode, f\"{u}hrt die Funktion des \textbf{PKGBUILD}s aus und installiert die Software in ein Fake-Dateisystem, welches im Anschluss als tar-Archiv gepackt und komprimiert wird, die essentiellen Informationen des \textbf{PKGBUILD}s werden als Textdatei in das Archiv \"{u}bernommen, die Paketdatei wird nach dem Schema \texttt{name-version-revision-architektur.tar.xz} benannt(.xz durch \textit{LZMA}-Komprimierung).
+
+\section*{Community}
+Anders als \textit{Red Hat} und \textit{Ubuntu}, ist Arch ein durch die Community getragenes Projekt. Die \textbf{Entwickler} und \textbf{Trusted User} arbeiten unentgeltlich in ihrer Freizeit am System und Nutzer haben die M\"{o}glichkeit ihre PKGBUILDs mittels des \textbf{AUR}\footnote{\url{http://aur.archlinux.org}} anderen Nutzern zur Verf\"{u}gung zu stellen.
+
+\end{document}

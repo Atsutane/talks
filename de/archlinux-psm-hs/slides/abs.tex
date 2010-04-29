@@ -3,12 +3,11 @@
 
 \begin{slide}{Arch Build System}
 	\begin{itemize}
-		\item{Ports \"{a}hnliches System}
-		\item{Was kann ich als User damit anfangen?
+		\item{Programme zu Paketierung von Software/Daten}
+		\item{Verwendung zur:
 			\begin{itemize}
-				\item{Erstellen von Paketen.}
-				\item{Unkompliziertes anpassen der Pakete aus den 
-					Repositories.}
+				\item{Paketierung}
+				\item{einfachen Modifikation der Bin\"{a}rpakete aus den Repositories}
 			\end{itemize}
 		}
 		\item{Aufgeteilt in:
@@ -23,61 +22,48 @@
 	\end{itemize}
 \end{slide}
 
-%% Konfiguration und Struktur von abs
-\begin{slide}{abs}
+
+%% Grobe Erkl\"{a}rung eines PKGBUILDs
+\begin{slide}{PKGBUILD}
 	\begin{itemize}
-		\item{Konfiguration
+		\item{einfache Textdatei}
+		\item{\textit{Kuchenrezept} f\"{u}r ein Paket}
+		\item{Festgelegt werden:
 			\begin{itemize}
-				\item{/etc/abs.conf}
-				\item{ABSROOT -  Standard: /var/abs}
-				\item{SYNCHSERVER - Standard: rsync.archlinux.org}
-				\item{REPOS - Standard: Alle, auch nicht gef\"{u}hrte}
-			\end{itemize}
-		}
-		\item{Struktur
-			\begin{itemize}
-				\item{ABSROOT
-					\begin{itemize}
-						\item{Repository
-							\begin{itemize}
-								\item{Paket}
-							\end{itemize}
-						}
-					\end{itemize}
-				}
-				\item{/var/abs/core/kernel26/
-					\begin{itemize}
-						\item{PKGBUILD config config.x86\_64 kernel26.install
-							kernel26.preset}
-					\end{itemize}
-				}
+				\item{Paketname}
+				\item{Version}
+				\item{Revision dieser Version}
+				\item{Quelle}
+				\item{Lizenz}
+				\item{Abh\"{a}ngigkeiten}
+				\item{Funktion \texttt{build} zur Festlegung zu erledigender Schritte}
 			\end{itemize}
 		}
 	\end{itemize}
 \end{slide}
 
-%% Grobes auseinandernehmen eines PKGBUILDs
-\begin{slide}{PKGBUILD - Werte}
-	\lstinputlisting[]{samples/PKGBUILD_pt1.sample}
-\end{slide}
-\begin{slide}{PKGBUILD - Funktionen}
-	\lstinputlisting[]{samples/PKGBUILD_pt2.sample}
+%% Konfiguration und Struktur von abs
+\begin{slide}{abs}
+	\begin{itemize}
+		\item{l\"{a}d PKGBUILDs der Bin\"{a}rpakete}
+		\item{synchronisiert die lokale Kopie mit dem Server}
+	\end{itemize}
 \end{slide}
 
 
 %% Konfiguration, besondere Optionen
 \begin{slide}{makepkg}
 	\begin{itemize}
-		\item{Konfiguration: \textit{/etc/makepkg.conf}}
-		\item{makepkg [Schalter]
+		\item{Shellskript}
+		\item{\texttt{build} Funktion des PKGBUILD im aktuellen Verzeichnis}
+		\item{makepkg erm\"{o}glicht:
 			\begin{itemize}
-				\item{\textit{c} Verzeichnis im Anschluss s\"{a}ubern}
-				\item{\textit{C} Auch Quelldateien entfernen}
-				\item{\textit{s} fehlende Abh\"{a}ngigkeiten installieren}
-				\item{\textit{r} installierte Abh\"{a}ngigkeiten im Anschluss
-					wieder entfernen}
-				\item{\textit{i} Paket im Anschluss installieren}
-				\item{\textit{g} Checksummen berechnen und ausgeben}
+				\item{anschließende Verzeichniss\"{a}uberung}
+				\item{Installation fehlender Abh\"{a}ngigkeiten}
+				\item{anschließendes entfernen dieser}
+				\item{direkte Installation nach erfolgreicher Paketierung}
+				\item{Berechnung von Pr\"{u}fsummen}
+				\item{Erstellung von Sourceballs}
 			\end{itemize}
 		}
 	\end{itemize}
@@ -86,7 +72,15 @@
 %% Screenshot, wird gesprochen erkl\"{a}rt
 \begin{slide}{Arch User Repository}
 	\begin{itemize}
-		\item{}
+		\item{Webseite: \url{http://aur.archlinux.org/}}
+		\item{Benutzer k\"{o}nnen
+			\begin{itemize}
+				\item{eigene PKGBUILDs/Sourceballs hochladen}
+				\item{anderer Benutzer Sourceballs herunterladen}
+				\item{f\"{u}r Sourceballs stimmen}
+				\item{verwaiste Pakete adoptieren}
+			\end{itemize}
+		}
 	\end{itemize}
 \end{slide}
 

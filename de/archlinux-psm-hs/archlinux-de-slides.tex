@@ -1,7 +1,7 @@
 %% Licensed as Creative Commons 3.0 BY SA
 %% Authors: Thorsten 'Atsutane' Toepper
 
-\documentclass[mode=print,paper=screen,size=10pt,style=horatio]{powerdot}
+\documentclass[mode=print,paper=screen,size=11pt,style=horatio]{powerdot}
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -22,10 +22,55 @@
 	numbersep=10pt,
 }
 
-\author{Atsutane}
-\title{Arch Linux - Eine einfache, schlanke Linux Distribution}
+\pddefinetemplate{basic}{
+  titlehook=Bl,
+  titlepos={.2\slidewidth,.91\slideheight},
+  titlewidth=.77\slidewidth,
+  titlefont=\color{white}\large\bfseries\raggedright,
+  clockcolor=white,clockpos={.99\slidewidth,\slideheight},
+  lfpos={.2\slidewidth,.04\slideheight},
+  lffont=\tiny\color{white},
+  rfpos={.97\slidewidth,.04\slideheight},
+  rffont=\tiny\color{white},
+  tocslidesep=.6ex,
+  textheight=.68\slideheight,
+  ifsetup=landscape,
+    toctcolor=pdcolor1,
+    tochlcolor=pdcolor1,
+    tochltcolor=white,
+    tocpos={.01\slidewidth,.81\slideheight},
+    tocwidth=.14\slidewidth,
+    tocsecm={\psline[linewidth=.5pt,linecolor=pdcolor1]%
+      (-.05,-.05)(.143\slidewidth,-.05)},
+  ifsetup=portrait,
+    toctcolor=white,
+    tochlcolor=white,
+    tochltcolor=pdcolor1,
+    tocsecsep=.6ex,
+    stochook=tr,stocpos={.55\slidewidth,.09\slideheight},
+    stocfont=\tiny\raggedleft,
+    ntocpos={.57\slidewidth,.09\slideheight}
+}{{%
+  \psset{linecolor=pdcolor1}%
+  \psframe*(0,0)(\slidewidth,.1\slideheight)%
+  \psframe*(0,.85\slideheight)(\slidewidth,\slideheight)%
+  \psset{linecolor=pdcolor2,linewidth=1pt}%
+  \psline(.17\slidewidth,0)(.17\slidewidth,.1\slideheight)%
+  \psline(.17\slidewidth,.85\slideheight)(.17\slidewidth,\slideheight)%
+  \rput(1.2,.50){\color{white}\begin{tiny}Arch Linux\end{tiny}}
+  \rput(6,.50){\color{white}\begin{tiny}Thorsten T\"{o}pper - Proseminar Hochschule Mannheim - 28. April 2010\end{tiny}}
+}}
 
+%% Symbols used in itemize sections
+\def\labelitemi{\small$\blacktriangleright{}$}
+\def\labelitemii{\small$\triangleright{}$}
+\def\labelitemiii{\small$\bullet{}$}
+\def\labelitemiv{\small\textdiamond{}}
+
+\author{Thorsten T\"{o}pper}
+\title{Arch Linux - Eine einfache, schlanke Linux Distribution}
 \pdsetup{palette=default}
+
 \begin{document}
 
 \maketitle
@@ -33,14 +78,12 @@
   \tableofcontents[content=sections]
 \end{slide}
 
-%% Ein Slide zur Vorstellung des Autors
-\include{slides/autor}
-
 %% Wie auch in den Wikis eine Vorstellung der Distribution 
-\section{Was ist Arch Linux?}
+\section{Allgemein: Linux}
+\include{slides/allgemein}
 \include{slides/wasistarchlinux}
 
-%% Kurze Erläuterung Pacmans
+%% Kurze Erl\"{a}uterung Pacmans
 \section{Pacman}
 \include{slides/pacman}
 
@@ -53,9 +96,9 @@
 \section{Systemkonfiguration und Initsystem}
 \include{slides/initsystem}
 
-%% Eine Erklärung des Aufgabenbereiches von Devs und 
-%% Trusted Usern, Gegenüberstellung um den Aufbau der
-%% Community zu erklären
+%% Eine Erkl\"{a}rung des Aufgabenbereiches von Devs und 
+%% Trusted Usern, Gegen\"{u}berstellung um den Aufbau der
+%% Community zu erkl\"{a}ren
 \section{Developer \& Trusted User}
 \include{slides/tusystem}
 
@@ -67,7 +110,7 @@
 
 %% Ansprache der Unterteilung der Community in regionaler
 %% und anderer Hinsicht und Nennung einiger zur Community
-%% gehörender Projekte (bspw. Chakra)
+%% geh\"{o}render Projekte (bspw. Chakra)
 \section{Community}
 \include{slides/community}
 
