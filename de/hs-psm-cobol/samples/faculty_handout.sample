@@ -1,0 +1,29 @@
+  IDENTIFICATION DIVISION.
+  PROGRAM-ID.
+     FACULTYPGM.
+
+  DATA DIVISION.
+  FILE SECTION.
+
+  WORKING-STORAGE SECTION.
+  01  EINGABE.
+      02 eingabewert PIC 99.
+  01  FAKULTAET.
+      02 ergebniswert PIC 9(18) VALUE 1.
+
+  PROCEDURE DIVISION.
+      main SECTION.
+          DISPLAY "Wert zur Fakultaetsberechnung:"
+          ACCEPT eingabewert.
+          DISPLAY "Wert: " eingabewert.
+
+          PERFORM faculty.
+
+          DISPLAY "Fakultaet: " ergebniswert.
+          STOP RUN.
+
+      faculty SECTION.
+          MULTIPLY eingabewert by ergebniswert.
+          SUBTRACT 1 FROM eingabewert.
+          IF eingabewert > 1 THEN
+              PERFORM faculty.

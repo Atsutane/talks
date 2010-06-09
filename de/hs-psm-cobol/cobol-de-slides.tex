@@ -1,0 +1,105 @@
+%% Licensed as Creative Commons 3.0 BY SA
+%% Authors: Thorsten 'Atsutane' Toepper
+
+\documentclass[mode=print,paper=screen,size=11pt,style=simple]{powerdot}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{ngerman}
+\usepackage{url}
+\usepackage{listings}
+
+\newcommand{\Anf}[1]{\glqq #1\grqq}
+
+\lstset{
+	basicstyle=\footnotesize\ttfamily,
+	numbers=left,
+	numberstyle=\tiny,
+	xleftmargin=10pt,
+	numbersep=10pt,
+}
+
+%% Symbols used in itemize sections
+\def\labelitemi{\small$\blacktriangleright{}$}
+\def\labelitemii{\small$\triangleright{}$}
+\def\labelitemiii{\small$\bullet{}$}
+\def\labelitemiv{\small\textdiamond{}}
+
+
+\pddefinetemplate{titleslide}{
+  titlefont=\large\bfseries\centering,
+  clockpos={.99\slidewidth,\slideheight},
+  lfpos={.03\slidewidth,.04\slideheight},
+  rfpos={.97\slidewidth,.04\slideheight},
+  texthook=t,textpos={.50\slidewidth,.7\slideheight},
+  textwidth=.9\slidewidth,textfont=\centering,
+  textheight=.66\slideheight
+}{%
+  \psline[linewidth=.8pt](0,.9\slideheight)(\slidewidth,.9\slideheight)%
+  \psline[linewidth=.8pt](0,.1\slideheight)(\slidewidth,.1\slideheight)%
+}
+\pddefinetemplate{basic}{
+  titlepos={.05\slidewidth,.93\slideheight},
+  titlewidth=.9\slidewidth,textheight=.66\slideheight,
+  titlefont=\large\bfseries\raggedright,
+  clockpos={.99\slidewidth,\slideheight},
+  lfpos={.03\slidewidth,.04\slideheight},
+  rfpos={.97\slidewidth,.04\slideheight},
+  tocslidesep=.6ex,textheight=.68\slideheight,
+  ifsetup=portrait,
+    textpos={.05\slidewidth,.83\slideheight},
+    textwidth=.9\slidewidth,
+    tocsecsep=.6ex,
+    stochook=tr,stocpos={.48\slidewidth,.09\slideheight},
+    stocfont=\tiny\raggedleft,
+    ntocpos={.52\slidewidth,.09\slideheight},
+  ifsetup=landscape,
+    textpos={.2\slidewidth,.83\slideheight},
+    textwidth=.75\slidewidth
+}{%
+  \psline[linewidth=.8pt](0,.9\slideheight)(\slidewidth,.9\slideheight)%
+  \psline[linewidth=.8pt](0,.1\slideheight)(\slidewidth,.1\slideheight)%
+  \rput(1.2,.50){\color{black}\begin{tiny}COBOL\end{tiny}}
+  \rput(6,.50){\color{black}\begin{tiny}Thorsten T\"{o}pper - Proseminar Hochschule Mannheim - 9. Juni 2010\end{tiny}}
+}
+
+\author{Thorsten T\"{o}pper\\
+	Proseminar Hochschule Mannheim}
+\title{COBOL - COmmon Business-Oriented Language}
+\pdsetup{palette=default}
+
+\begin{document}
+
+\maketitle
+\begin{slide}{Inhalt}
+  \tableofcontents[content=sections]
+\end{slide}
+
+
+%% Kurze Erläuterung wie und weshalb COBOL entstand
+\section{Entstehung}
+\include{slides/entstehung}
+
+
+%% Die weiterführende Geschichte der Sprache
+\section{Geschichte}
+\include{slides/geschichte}
+
+
+%% Betrachtung der Vor- und Nachteile der Sprache
+\section{Vor- und Nachteile}
+\include{slides/procontra}
+
+%% Erklärung der Syntax an einem Beispielprogramm
+\section{Syntax}
+\include{slides/syntax}
+\include{slides/beispiel}
+
+% Die Angabe der zur Recherche verwendeten Quellen
+\section{Quellen}
+\include{slides/quellen}
+
+\end{document}

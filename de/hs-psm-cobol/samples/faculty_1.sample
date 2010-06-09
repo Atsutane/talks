@@ -1,0 +1,12 @@
+        IDENTIFICATION DIVISION.
+        PROGRAM-ID.
+            FACULTYPGM.
+
+        DATA DIVISION.
+        FILE SECTION.
+
+        WORKING-STORAGE SECTION.
+        01  EINGABE.
+            02 eingabewert PIC 99.
+        01 FAKULTAET.
+            02 ergebniswert PIC 9(18) VALUE 1.

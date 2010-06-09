@@ -1,0 +1,17 @@
+        PROCEDURE DIVISION.
+
+        main SECTION.
+            DISPLAY "Wert zur Fakultaetsberechnung:"
+            ACCEPT eingabewert.
+            DISPLAY "Wert: " eingabewert.
+
+            PERFORM faculty.
+
+            DISPLAY "Fakultaet: " ergebniswert.
+            STOP RUN.
+
+        faculty SECTION.
+            MULTIPLY eingabewert by ergebniswert.
+            SUBTRACT 1 FROM eingabewert.
+            IF eingabewert > 1 THEN
+                PERFORM faculty.
